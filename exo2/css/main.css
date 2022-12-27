@@ -1,0 +1,134 @@
+body {
+  background: hsl(30deg, 38%, 92%);
+  min-width: 375px;
+  margin: 0;
+}
+body .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px 10px 10px 10px;
+  background: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .card .cover_m {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 351px;
+  border-radius: 10px 10px 0px 0px;
+}
+body .card .cover {
+  display: none;
+  height: 475px;
+  border-radius: 10px 0px 0px 10px;
+}
+body .card .info {
+  padding: 25px;
+  border-radius: 0px 0px 10px 10px;
+  border: none;
+  margin: 0;
+}
+body .card .info .categorie {
+  font-size: 13px;
+  font-family: Montserrat;
+  margin: 0;
+  letter-spacing: 4px;
+  color: hsl(230deg, 3%, 45%);
+}
+body .card .info .description {
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 500;
+  color: hsl(230deg, 3%, 45%);
+  margin: 0px 0px 20px 0px;
+  line-height: 22px;
+}
+body .card .info .prix {
+  font-family: Fraunces;
+  color: hsl(158deg, 36%, 37%);
+  font-size: 32px;
+  vertical-align: middle;
+  display: inline;
+  font-weight: 800;
+}
+body .card .info .prixbarre {
+  display: inline;
+  padding: 0px 0px 0px 18px;
+  text-decoration: line-through;
+  color: hsl(230deg, 3%, 45%);
+  font-family: Montserrat;
+  font-size: 13px;
+}
+body .card .info button {
+  background: hsl(158deg, 36%, 37%);
+  width: 100%;
+  margin-top: 17px;
+  border: none;
+  height: 48px;
+  border-radius: 8px;
+  color: hsl(0deg, 0%, 100%);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: baseline;
+}
+body .card .info button::before {
+  content: url(../images/icon-cart.svg);
+  width: 28px;
+  display: inline-block;
+  margin-right: 0.35em;
+  color: #FFF;
+  vertical-align: middle;
+}
+
+h2 {
+  font-family: Fraunces;
+  font-size: 32px;
+  margin: 12px 0;
+  line-height: 35px;
+}
+
+@media (min-width: 481px) {
+  body .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .card .cover {
+    display: inline;
+    height: 370px;
+  }
+  body .card .cover_m {
+    display: none;
+  }
+  body .card .info {
+    padding: 25px;
+    width: 210px;
+  }
+  body .card .info .categorie {
+    margin: 0px 0px 10px 0px;
+  }
+  body .card .info .description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  body .card .info .description .break {
+    display: none;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,126 @@
+@import 'var';
+    body {
+        background: $prim-cream;
+        min-width: 375px;
+        margin: 0;
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px 10px 10px 10px;
+            background: #FFF;
+            display: flex;
+            flex-direction: column;
+            .cover_m {
+                object-fit: contain;
+                width: 351px;
+                border-radius: 10px 10px 0px 0px;
+            }
+            .cover {
+                display: none;
+                height: 475px;
+                border-radius: 10px 0px 0px 10px;
+            }
+            .info {
+                padding: 25px;
+                border-radius: 0px 0px 10px 10px;
+                border: none;
+                margin: 0;
+                .categorie {
+                    font-size: 13px;
+                    font-family: $titre;
+                    margin: 0;
+                    letter-spacing: 4px;
+                    color: $grey-text;
+                }
+                .description {
+                    font-size: 14px;
+                    font-family: $titre;
+                    font-weight: 500;
+                    color: $grey-text;
+                    margin: 0px 0px 20px 0px;
+                    line-height: 22px;
+                }
+                .prix {
+                    font-family: $texte;
+                    color: $cyan;
+                    font-size: 32px;
+                    vertical-align: middle;
+                    display: inline;
+                    font-weight: 800;
+                }
+                .prixbarre {
+                    display: inline;
+                    padding: 0px 0px 0px 18px;
+                    text-decoration: line-through;
+                    color: $grey-text;
+                    font-family: $titre;
+                    font-size: 13px;
+                }
+                button {
+                    background: $cyan;
+                    width: 100%;
+                    margin-top:17px;
+                    border: none;
+                    height: 48px;
+                    border-radius: 8px;
+                    color: $white;
+                    font-family: $titre;
+                    font-size: 14px;
+                    font-weight: 500;
+                    vertical-align: baseline;
+                }
+                button::before {
+                    content: url(../images/icon-cart.svg);
+                    width: 28px;
+                    display: inline-block;
+                    margin-right: 0.35em;
+                    color: #FFF;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-family: $texte;
+        font-size: 32px;
+        margin: 12px 0;
+        line-height: 35px;
+    }
+
+@media (min-width: 481px) {
+    body {
+        .card {
+            display: flex;
+            flex-direction: row;
+            .cover {
+                display:inline;
+                height: 370px;
+            }
+            .cover_m {
+                display: none;
+            }
+            .info {
+                padding: 25px;
+                width: 210px;
+                .categorie {
+                    margin: 0px 0px 10px 0px;
+                }
+                .description {
+                    font-size: 12px;
+                    line-height: 18px;
+                    .break {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
